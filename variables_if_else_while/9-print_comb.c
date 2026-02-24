@@ -12,13 +12,10 @@ int s_digit;
 for (s_digit = 48; s_digit <= 57; s_digit++)
 {
 	putchar(s_digit);
-	if (s_digit == 57)
-	{
-		putchar(' ');
-	}
-	else
+	if (s_digit != 57)
 	{
 		putchar(',');
+		putchar(' ');
 	}
 }
 
