@@ -1,8 +1,16 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Generates a random number and prints whether it is
+ * positive, negative, or zero.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 
 {
@@ -13,17 +21,17 @@ int main(void)
 
 	if (n > 0)
 	{
-		printf("is positive");
+		printf("%d is positive\n");
 	}
 
 	if (n < 0)
 	{
-		printf("is negative");
+		printf("%d is negative\n");
 	}
 
 	if (n == 0)
 	{
-		printf("is zero");
+		printf("%d is zero\n");
 	}
 	/* your code goes there */
 	return (0);
