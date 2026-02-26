@@ -19,11 +19,10 @@ int total_sum(int rows, int cols)
 
     for (r = 1; r <= rows; r++)
     {
-        current += row_sum(r, cols);
-        total += current;
+        total += row_sum(r, cols);
     }
 
-    return current;
+    return total;
 }
 
 /* -- DO NOT Modify the code below this line -- */
