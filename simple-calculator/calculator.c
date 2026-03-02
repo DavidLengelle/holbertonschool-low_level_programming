@@ -51,6 +51,15 @@ while (userChoice != 0)
 		result = A - B;
 		printf("Result: %d\n", result);
 	}
+	else if (userChoice == 3)
+	{
+		printf("A: ");
+		scanf("%d", &A);
+		printf("B: ");
+		scanf("%d", &B);
+		result = A * B;
+		printf("Result: %d\n", result);
+	}
 }
 
 return (0);
