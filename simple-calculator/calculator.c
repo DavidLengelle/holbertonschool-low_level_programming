@@ -8,8 +8,12 @@
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+double main(void)
 {
+	/*
+	Betty ne veux pas plus de 5 fonctions par fichier et 40 par fonction. 
+	Donc il faut que je condense tout ça.
+	*/ 
 
 	int userChoice, A, B, result;
 
@@ -58,6 +62,24 @@ while (userChoice != 0)
 		printf("B: ");
 		scanf("%d", &B);
 		result = A * B;
+		printf("Result: %d\n", result);
+	}
+	else if (userChoice == 4)
+	/*
+	Betty ne veux pas plus de 5 fonctions par fichier et 40 par fonction. 
+	Donc il faut que je condense tout ça et terminer le projet.
+	*/ 
+	{
+		printf("A: ");
+		scanf("%d", &A);
+		printf("B: ");
+		scanf("%d", &B);
+		result = A / B;
+
+		if (B == 0)
+		{
+			printf("Error: division by zero");
+		}
 		printf("Result: %d\n", result);
 	}
 }
