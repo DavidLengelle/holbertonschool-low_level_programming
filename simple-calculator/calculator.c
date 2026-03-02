@@ -10,6 +10,9 @@
  */
 int main(void)
 {
+
+	int userChoice;
+
 	printf("Simple Calculator\n");
 	printf("1) Add\n");
 	printf("2) Subtract\n");
@@ -18,6 +21,17 @@ int main(void)
 	printf("0) Quit\n");
 	printf("Choice: 0\n");
 	printf("Bye!\n");
+
+	scanf("%d", &userChoice);
+
+	if (userChoice > '4')
+	{
+		printf("Invalid choice");
+	}
+	else if (userChoice == '0')
+	{
+		printf("Bye!");
+	}
 
 return (0);
 }
