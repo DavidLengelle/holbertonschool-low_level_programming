@@ -78,13 +78,13 @@ int main(void)
 		if (checksum !=0ul)
 			{
 			printf("TOTAL seconds: %6f\n", 
-				(double)(ti_reduce - ti_start) / CLOCKS_PER_SEC);
+				(double)(ti_reduce - ti_start) / (double)CLOCKS_PER_SEC);
 			printf("BUILD_DATA seconds: %6f\n", 
-				(double)(ti_build - ti_start) / CLOCKS_PER_SEC);
+				(double)(ti_build - ti_start) / (double)CLOCKS_PER_SEC);
 			printf("PROCESS seconds: %6f\n", 
-				(double)(ti_process - ti_build) / CLOCKS_PER_SEC);
+				(double)(ti_process - ti_build) / (double)CLOCKS_PER_SEC);
 			printf("REDUCE seconds: %6f\n", 
-				(double)(ti_reduce - ti_process) / CLOCKS_PER_SEC);
+				(double)(ti_reduce - ti_process) / (double)CLOCKS_PER_SEC);
 			}
 
     /* Required output (exact format, no extra lines):
