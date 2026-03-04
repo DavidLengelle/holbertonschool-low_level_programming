@@ -1,6 +1,7 @@
 # Title
 
-calculator.c
+Simple Calculator
+
 ## 📄 <span id="description">Description</span>
 
 
