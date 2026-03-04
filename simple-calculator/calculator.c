@@ -4,85 +4,94 @@
 #include <ctype.h>
 
 /**
+ * addition - adds two numbers
+ * @a: First number
+ * @b: Second number
+ * Return: Result
+ */
+double addition(double a, double b)
+{
+	return (a + b);
+}
+
+/**
+ * subtraction - substract two numbers
+ * @a: First number
+ * @b: Second number
+ * Return: Result
+ */
+double subtraction(double a, double b)
+{
+	return (a - b);
+}
+
+/**
+ * multiplication - multiplies two numbers
+ * @a: First number
+ * @b: Second number
+ * Return: Result
+ */
+double multiplication(double a, double b)
+{
+	return (a * b);
+}
+
+/**
+ * division - divide two numbers
+ * @a: First number
+ * @b: Second number
+ * Return: Result
+ */
+double division(double a, double b)
+{
+	return (a / b);
+}
+
+/**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-double main(void)
+int main(void)
 {
-	/*
-	Betty ne veux pas plus de 5 fonctions par fichier et 40 par fonction. 
-	Donc il faut que je condense tout ça.
-	*/ 
-
-	int userChoice, A, B, result;
+int userChoice = -1;
+double num1 = 0, num2 = 0, result = 0;
 
 while (userChoice != 0)
 {
-
-	printf("Simple Calculator\n");
-	printf("1) Add\n");
-	printf("2) Subtract\n");
-	printf("3) Multiply\n");
-	printf("4) Divide\n");
-	printf("0) Quit\n");
-
+	printf("Simple Calculator\n1) Add\n2) Subtract\n");
+	printf("3) Multiply\n4) Divide\n0) Quit\n");
+	printf("Make your choice:");
 	scanf("%d", &userChoice);
-
-	if (userChoice > 4)
-	{
-		printf("Invalid choice");
-	}
-	else if (userChoice == 0)
+	if (userChoice == 0)
 	{
 		printf("Bye!");
+		break;
 	}
-	else if (userChoice == 1)
+	if (userChoice >= 1 && userChoice <= 4)
 	{
 		printf("A: ");
-		scanf("%d", &A);
+		scanf("%lf", &num1);
 		printf("B: ");
-		scanf("%d", &B);
-		result = A + B;
-		printf("Result: %d\n", result);
-	}
+		scanf("%lf", &num2);
+
+	if (userChoice == 1)
+		result = addition(num1, num2);
 	else if (userChoice == 2)
-	{
-		printf("A: ");
-		scanf("%d", &A);
-		printf("B: ");
-		scanf("%d", &B);
-		result = A - B;
-		printf("Result: %d\n", result);
-	}
+		result = subtraction(num1, num2);
 	else if (userChoice == 3)
-	{
-		printf("A: ");
-		scanf("%d", &A);
-		printf("B: ");
-		scanf("%d", &B);
-		result = A * B;
-		printf("Result: %d\n", result);
-	}
+		result = multiplication(num1, num2);
 	else if (userChoice == 4)
-	/*
-	Betty ne veux pas plus de 5 fonctions par fichier et 40 par fonction. 
-	Donc il faut que je condense tout ça et terminer le projet.
-	*/ 
 	{
-		printf("A: ");
-		scanf("%d", &A);
-		printf("B: ");
-		scanf("%d", &B);
-		result = A / B;
-
-		if (B == 0)
-		{
-			printf("Error: division by zero");
-		}
-		printf("Result: %d\n", result);
+		if (num2 == 0)
+			printf("Error: division by zero\n");
+		else
+		result = division(num1, num2);
 	}
+	printf("Result: %f\n", result);
+	}
+	else
+		printf("Invalid choice");
 }
-
 return (0);
 }
