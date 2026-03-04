@@ -7,13 +7,18 @@ calculator.c
 The project description.
 
 
-compile command (exact flags)
+Compilation command (exact options)
 
-run instructions
+Run instructions
 
-supported operations
+To run it, type `./calculator`
 
-numeric behavior (integer vs decimal)
+Supported operations
 
-known limitations (if any)
+Addition, subtraction, multiplication, and division.
 
+Numer behavior (integer or decimal)
+
+It is possible to use decimal numbers. The result will have 6 digits after the decimal point.
+
+Known limitations (if any)
