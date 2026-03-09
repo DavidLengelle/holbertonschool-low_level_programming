@@ -9,9 +9,9 @@
  * @b: Second number
  * Return: Result
  */
-double addition(double a, double b)
+void addition(double a, double b)
 {
-	return (a + b);
+	printf("Result: %f\n", a + b);
 }
 
 /**
@@ -20,9 +20,9 @@ double addition(double a, double b)
  * @b: Second number
  * Return: Result
  */
-double subtraction(double a, double b)
+void subtraction(double a, double b)
 {
-	return (a - b);
+	printf("Result: %f\n", a - b);
 }
 
 /**
@@ -31,9 +31,9 @@ double subtraction(double a, double b)
  * @b: Second number
  * Return: Result
  */
-double multiplication(double a, double b)
+void multiplication(double a, double b)
 {
-	return (a * b);
+	printf("Result: %f\n", a * b);
 }
 
 /**
@@ -42,9 +42,14 @@ double multiplication(double a, double b)
  * @b: Second number
  * Return: Result
  */
-double division(double a, double b)
+void division(double a, double b)
 {
-	return (a / b);
+	if (b == 0)
+	{
+		printf("Error: division by zero\n");
+		return;
+	}
+	printf("Result: %f\n", a / b);
 }
 
 /**
@@ -54,44 +59,38 @@ double division(double a, double b)
  */
 int main(void)
 {
-int userChoice = -1;
-double num1 = 0, num2 = 0, result = 0;
+	int userChoice = -1;
+	double num1 = 0, num2 = 0;
 
-while (userChoice != 0)
-{
-	printf("Simple Calculator\n1) Add\n2) Subtract\n");
-	printf("3) Multiply\n4) Divide\n0) Quit\n");
-	printf("Make your choice:");
-	scanf("%d", &userChoice);
-	if (userChoice == 0)
+	while (userChoice != 0)
 	{
-		printf("Bye!");
-		break;
-	}
-	if (userChoice >= 1 && userChoice <= 4)
-	{
-		printf("A: ");
-		scanf("%lf", &num1);
-		printf("B: ");
-		scanf("%lf", &num2);
+		printf("Simple Calculator\n1) Add\n2) Subtract\n");
+		printf("3) Multiply\n4) Divide\n0) Quit\n");
+		printf("Make your choice:");
+		scanf("%d", &userChoice);
+		if (userChoice == 0)
+		{
+			printf("Bye!");
+			break;
+		}
+		if (userChoice >= 1 && userChoice <= 4)
+		{
+			printf("A: ");
+			scanf("%lf", &num1);
+			printf("B: ");
+			scanf("%lf", &num2);
 
-	if (userChoice == 1)
-		result = addition(num1, num2);
-	else if (userChoice == 2)
-		result = subtraction(num1, num2);
-	else if (userChoice == 3)
-		result = multiplication(num1, num2);
-	else if (userChoice == 4)
-	{
-		if (num2 == 0)
-			printf("Error: division by zero\n");
+			if (userChoice == 1)
+				addition(num1, num2);
+			else if (userChoice == 2)
+				subtraction(num1, num2);
+			else if (userChoice == 3)
+				multiplication(num1, num2);
+			else if (userChoice == 4)
+				division(num1, num2);
+		}
 		else
-		result = division(num1, num2);
+			printf("Invalid choice\n");
 	}
-	printf("Result: %f\n", result);
-	}
-	else
-		printf("Invalid choice");
-}
-return (0);
+	return (0);
 }
