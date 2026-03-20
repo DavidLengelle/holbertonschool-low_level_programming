@@ -46,5 +46,6 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 void _puts_recursion(char *s);
+void _print_rev_recursion(char *s);
 
 #endif
